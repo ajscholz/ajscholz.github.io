@@ -1,0 +1,121 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin:0;
+    background-repeat:no-repeat;
+    background-color:black;
+}
+
+.viewport-1 {
+    background-image:radial-gradient(rgba(0,0,0,.4), rgba(0,0,0,.66)),url('aud.jpg');
+    background-size:cover;
+    background-position: center;
+    height: 100vh;
+    display:flex;
+    flex-wrap:wrap;
+}
+
+.viewport-1 > div {
+    width:100%;
+    height:33vh;
+    display:flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap:wrap;
+    padding:25px;
+}
+
+.circle-c {
+    height:40px;
+    width:40px;
+}
+
+i {
+    color:white;
+    font-size:40px;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight:300;
+    color:white;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+    font-size: 3.5em;
+    z-index: 2;
+    text-align:center;
+    margin:25px;
+    width:100vw;
+}
+
+.sign-up-button {
+    font-family: Montserrat;
+    cursor:pointer;
+    border-radius: 32px;
+    background-color: #2e819f;
+    color:white;
+    text-transform: uppercase;
+    font-size:1em;
+    letter-spacing:.05em;
+    padding:20px 40px;
+    margin:25px;
+    border: none;
+    transition: all .3s;
+    z-index: 2;
+    outline: 0;
+}
+
+.sign-up-button:hover {
+    transform: scale(1.1);
+}
+
+.sign-up-button:active {
+    transform:scale(.9);
+}
+
+#flex-bottom {
+    align-items: flex-end;
+}
+
+.arrow-container {
+    width:47px;
+    height:36px;
+    display:flex;
+    flex-wrap: nowrap;
+    transform: rotate(90deg);
+}
+
+svg {
+    width:100%;
+    height:100%;
+	stroke:white;
+	overflow:hidden;
+    fill-opacity:0;
+}
+
+.arrow-container svg:hover {
+    stroke:#2e819f;
+}
+
+.arrow-container svg polyline {
+    animation: arrow-fade 2s infinite;
+    opacity:0;
+}
+
+.arrow-container svg polyline:nth-of-type(1) {
+    animation-delay: 0s;
+}
+.arrow-container svg polyline:nth-of-type(2) {
+    animation-delay: .15s;
+}
+.arrow-container svg polyline:nth-of-type(3) {
+    animation-delay: .30s;
+}
+
+@keyframes arrow-fade {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
